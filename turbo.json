@@ -1,0 +1,16 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "extends": ["//"],
+  "baseBranch": "origin/main",
+  "globalDependencies": ["pnpm-lock.yaml", "patches"],
+  "pipeline": {
+    "lint:check": { "dependsOn": ["lint:js", "lint:prettier"] },
+    "lint:fix": { "dependsOn": ["lint:js:fix", "lint:prettier:fix"] },
+
+    "lint:js": {},
+    "lint:prettier": {},
+
+    "lint:js:fix": {},
+    "lint:prettier:fix": { "dependsOn": ["lint:js:fix"] }
+  }
+}

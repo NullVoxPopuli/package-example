@@ -6,8 +6,12 @@
     "dist"
   ],
   "scripts": {
+    "lint": "turbo lint:check",
+    "fix": "turbo lint:fix",
     "lint:js": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint:prettier": "prettier --check .",
+    "lint:js:fix": "eslint --fix .",
+    "lint:prettier:fix": "prettier --write .",
     "build": "tsc",
     "prepack": "pnpm build"
   },
@@ -27,6 +31,8 @@
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
     "eslint": "^8.47.0",
+    "prettier": "^3.0.2",
+    "turbo": "^1.10.12",
     "typescript": "^5.1.6"
   },
   "dependencies": {
