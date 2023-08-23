@@ -1,13 +1,23 @@
 {
   "name": "@nullvoxpopuli/package-example",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "type": "module",
   "files": [
-    "src"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "pnpm build"
+  },
   "exports": {
-    ".": "./dist/math-helpers.js",
-    "./*": "./dist/*"
+    ".": {
+      "types": "./dist/math-helpers.d.ts",
+      "default": "./dist/math-helpers.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*"
+    }
   },
   "devDependencies": {
     "@tsconfig/esm": "^1.0.4",
