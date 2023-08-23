@@ -1,10 +1,13 @@
 {
   "name": "@nullvoxpopuli/package-example",
-  "version": "0.0.1",
-  "scripts": {
-    "test": "vitest"
+  "version": "0.0.3",
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": "./src/math-helpers.js",
+    "./*": "./src/*"
   },
   "devDependencies": {
-    "vitest": "^0.34.2"
   }
 }

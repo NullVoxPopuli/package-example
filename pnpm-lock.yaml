@@ -4,10 +4,23 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-devDependencies:
-  vitest:
-    specifier: ^0.34.2
-    version: 0.34.2
+importers:
+
+  .:
+    devDependencies:
+      vitest:
+        specifier: ^0.34.2
+        version: 0.34.2
+
+  tests:
+    dependencies:
+      '@nullvoxpopuli/package-example':
+        specifier: workspace:*
+        version: link:..
+    devDependencies:
+      vitest:
+        specifier: ^0.34.2
+        version: 0.34.2
 
 packages:
 

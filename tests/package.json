@@ -1,0 +1,13 @@
+{
+  "name": "@nullvoxpopuli/package-example-tests",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@nullvoxpopuli/package-example": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "^0.34.2"
+  }
+}
