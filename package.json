@@ -1,6 +1,9 @@
 {
   "name": "@nullvoxpopuli/package-example",
   "version": "0.0.1",
+  "scripts": {
+    "test": "vitest"
+  },
   "devDependencies": {
     "vitest": "^0.34.2"
   }
