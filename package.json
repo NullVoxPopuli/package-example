@@ -1,13 +1,17 @@
 {
   "name": "@nullvoxpopuli/package-example",
-  "version": "0.0.3",
+  "version": "0.0.5",
+  "type": "module",
   "files": [
     "src"
   ],
   "exports": {
-    ".": "./src/math-helpers.js",
-    "./*": "./src/*"
+    ".": "./dist/math-helpers.js",
+    "./*": "./dist/*"
   },
   "devDependencies": {
+    "@tsconfig/esm": "^1.0.4",
+    "@tsconfig/strictest": "^2.0.1",
+    "typescript": "^5.1.6"
   }
 }
